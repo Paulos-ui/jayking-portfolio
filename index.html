@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080908" />
+  <meta name="description" content="Jayking — Web3 builder, developer, content strategist, community operator, Spaces host and motion designer." />
+  <meta property="og:title" content="Jayking — Build. Write. Move. Motion." />
+  <meta property="og:description" content="A multi-disciplinary Web3 portfolio by Jayking." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/jayking-pfp.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Jayking — Web3 Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <canvas id="signalField" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <div id="gate" class="gate" role="dialog" aria-modal="true" aria-label="Welcome to Jayking's portfolio">
+    <div class="gate-grid" aria-hidden="true"></div>
+    <div class="gate-inner">
+      <div class="gate-mark">
+        <div class="pfp-shell pfp-shell--gate">
+          <img src="./assets/jayking-pfp.jpg" alt="Jayking chess king avatar" />
+          <span class="orbit orbit-a"></span><span class="orbit orbit-b"></span>
+        </div>
+        <span class="gate-index">PORTFOLIO / 2026</span>
+      </div>
+      <div class="gate-copy">
+        <p class="eyebrow">WELCOME TO THE BOARD</p>
+        <h1 class="gate-title"><span>JAY</span><span>KING</span></h1>
+        <p class="gate-line">Builder. Writer. Community operator. Motion designer.</p>
+        <button id="enterSite" class="magnetic primary-cta" type="button">
+          <span>ENTER PORTFOLIO</span><span class="cta-arrow">↗</span>
+        </button>
+        <p class="gate-hint">Tap to enter · motion adapts to your device</p>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-nav" id="siteNav">
+    <a class="brand" href="#home" aria-label="Jayking home">
+      <span class="brand-glyph">♚</span><span>JAYKING</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#work">Work</a><a href="#proof">Proof</a><a href="#resumes">Resumes</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-status" href="mailto:pauljayking1@gmail.com"><span></span>Available for Web3 work</a>
+  </header>
+
+  <aside class="rail" aria-label="Section progress">
+    <span class="rail-label">INDEX</span>
+    <a href="#home" data-section="home">01</a><a href="#work" data-section="work">02</a><a href="#builder" data-section="builder">03</a><a href="#content" data-section="content">04</a><a href="#community" data-section="community">05</a><a href="#motion" data-section="motion">06</a><a href="#proof" data-section="proof">07</a><a href="#resumes" data-section="resumes">08</a>
+  </aside>
+
+  <main>
+    <section id="home" class="hero section-dark observe">
+      <div class="hero-topline reveal">
+        <span>WEB3 / PRODUCT / STORY / COMMUNITY</span>
+        <span class="mono">@__official__1</span>
+      </div>
+      <div class="hero-center">
+        <div class="hero-avatar reveal">
+          <div class="pfp-shell">
+            <img src="./assets/jayking-pfp.jpg" alt="Jayking chess king PFP" />
+            <span class="scanline"></span>
+          </div>
+          <div class="avatar-caption"><span>JAYKING</span><span class="mono">CHESS KING PFP GUY</span></div>
+        </div>
+        <div class="hero-copy reveal">
+          <p class="eyebrow">MULTI-DISCIPLINARY WEB3 OPERATOR</p>
+          <h2>I turn Web3 ideas into things people can <em>use, understand</em> and <em>rally around.</em></h2>
+          <p class="hero-summary">Developer-level technical depth, research-led storytelling, community execution and motion craft — connected into one operating system.</p>
+          <div class="hero-actions">
+            <a class="primary-cta magnetic" href="#work"><span>CHOOSE MY WORK</span><span>↓</span></a>
+            <a class="text-link" href="#resumes">Resume vault ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="kinetic-strip" aria-hidden="true">
+        <div class="kinetic-track"><span>BUILD</span><i>♚</i><span>WRITE</span><i>♚</i><span>MOVE</span><i>♚</i><span>MOTION</span><i>♚</i><span>BUILD</span><i>♚</i><span>WRITE</span><i>♚</i></div>
+      </div>
+    </section>
+
+    <section id="work" class="role-stage observe">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">02 / CHOOSE A LANE</p><h2>What brought you here?</h2></div>
+        <p>Pick the part of my work that matters to you. Each lane opens into its own proof, process and links.</p>
+      </div>
+      <div class="role-deck" id="roleDeck">
+        <a class="role-card tilt-card role-builder" href="#builder" data-role="builder">
+          <span class="role-no">01</span><span class="role-symbol">⌘</span>
+          <div><h3>BUILDER</h3><p>Protocols · Products · Frontend · Smart contracts · AI agents</p></div>
+          <span class="role-enter">ENTER LANE ↗</span>
+        </a>
+        <a class="role-card tilt-card role-content" href="#content" data-role="content">
+          <span class="role-no">02</span><span class="role-symbol">¶</span>
+          <div><h3>CONTENT</h3><p>Research · Threads · Articles · Technical storytelling</p></div>
+          <span class="role-enter">ENTER LANE ↗</span>
+        </a>
+        <a class="role-card tilt-card role-community" href="#community" data-role="community">
+          <span class="role-no">03</span><span class="role-symbol">◎</span>
+          <div><h3>COMMUNITY</h3><p>Community management · Spaces · Launch support · GTM</p></div>
+          <span class="role-enter">ENTER LANE ↗</span>
+        </a>
+        <a class="role-card tilt-card role-motion" href="#motion" data-role="motion">
+          <span class="role-no">04</span><span class="role-symbol">◌</span>
+          <div><h3>MOTION</h3><p>Motion design · Visual storytelling · Campaign creative</p></div>
+          <span class="role-enter">ENTER LANE ↗</span>
+        </a>
+      </div>
+      <div class="deck-note mono">DRAG / SWIPE / CLICK →</div>
+    </section>
+
+    <section id="builder" class="lane lane-builder observe">
+      <div class="lane-intro reveal">
+        <div class="lane-kicker"><span>03</span><span>BUILDER</span></div>
+        <h2>I build the thing <span>before</span> I explain the thing.</h2>
+        <p>Hands-on across Solana, EVM and emerging Web3 infrastructure — from protocol architecture and smart contracts to interfaces, wallet flows and AI-enabled products.</p>
+      </div>
+      <div class="builder-grid">
+        <article class="project-card project-card--hero reveal">
+          <div class="project-meta"><span>SOLANA · AI · DEFI</span><span>01</span></div>
+          <div class="project-visual visual-lp"><div class="terminal-lines"><b>LP / COPILOT</b><span>portfolio intelligence</span><span>zap in / zap out</span><span>AI advisor</span></div></div>
+          <h3>LP Copilot</h3>
+          <p>AI-powered Solana liquidity-provider dashboard combining live LP data, portfolio analysis, pool discovery and transaction workflows.</p>
+          <div class="project-links"><a href="https://lp-copilot.vercel.app" target="_blank" rel="noreferrer">LIVE ↗</a><a href="https://github.com/Paulos-ui/lp-copilot" target="_blank" rel="noreferrer">CODE ↗</a></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-meta"><span>PRIVACY · DEFI · EVM</span><span>02</span></div>
+          <div class="project-visual visual-umbra"><span class="eclipse"></span><span class="umbra-word">UMBRA</span></div>
+          <h3>Umbra</h3>
+          <p>A confidential batch router built around iExec Nox and Uniswap — designed to keep individual trade size private while preserving public settlement.</p>
+          <div class="project-links"><a href="https://umbra.vercel.app" target="_blank" rel="noreferrer">LIVE ↗</a><a href="https://github.com/Paulos-ui/umbra" target="_blank" rel="noreferrer">CODE ↗</a></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-meta"><span>AI AGENT · ONCHAIN</span><span>03</span></div>
+          <div class="project-visual visual-openclaw"><span>THESIS</span><i>→</i><span>STRESS TEST</span><i>→</i><span>LEDGER</span></div>
+          <h3>OpenClaw Conviction Engine</h3>
+          <p>An AI investor instance for formalizing theses, stress-testing assumptions, tracking invalidation conditions and maintaining an auditable conviction ledger.</p>
+          <div class="project-links"><a href="https://github.com/Paulos-ui/OpenClaw-Agent-Wallet-Autonomous-AI-Investor-Wallet-on-Mantle" target="_blank" rel="noreferrer">CODE ↗</a></div>
+        </article>
+      </div>
+
+      <div class="github-live reveal">
+        <div class="github-live-head">
+          <div><p class="eyebrow">LIVE BUILD LIBRARY</p><h3>Every deployed website from my GitHub.</h3></div>
+          <div class="github-state"><span id="githubPulse"></span><span id="githubStatus">Connecting to GitHub…</span></div>
+        </div>
+        <p class="github-note">This section syncs from <a href="https://github.com/Paulos-ui" target="_blank" rel="noreferrer">@Paulos-ui</a> and automatically lists public repositories with a live homepage URL.</p>
+        <div id="liveBuilds" class="live-build-grid" aria-live="polite"></div>
+      </div>
+
+      <div class="stack-band reveal">
+        <span class="mono">WORKING STACK</span>
+        <div><b>TypeScript</b><b>JavaScript</b><b>Rust</b><b>Python</b><b>Solidity</b><b>Next.js</b><b>React</b><b>Node.js</b><b>Tailwind</b><b>Anchor</b><b>Hardhat</b><b>Vercel</b></div>
+      </div>
+    </section>
+
+    <section id="content" class="lane lane-content observe">
+      <div class="lane-intro reveal">
+        <div class="lane-kicker"><span>04</span><span>CONTENT</span></div>
+        <h2>Research first. <span>Narrative second.</span> Hype last.</h2>
+        <p>I use a builder's understanding of Web3 to turn technical systems, ecosystems and headlines into stories people can actually follow.</p>
+      </div>
+      <div class="content-ledger">
+        <a class="story-card tilt-card reveal" href="https://x.com/__Official__1/status/2067839732348866576" target="_blank" rel="noreferrer">
+          <div class="story-top"><span>SUPERTEAM DE</span><span>10 CHAPTERS</span></div>
+          <h3>Solana Summit Germany</h3>
+          <p>An event story built as a chaptered narrative instead of a recap dump.</p>
+          <div class="metrics"><strong>24.1K</strong><span>views</span><strong>338</strong><span>likes</span></div>
+          <span class="story-link">READ THREAD ↗</span>
+        </a>
+        <a class="story-card tilt-card reveal" href="https://x.com/__Official__1/status/2102715042206547971" target="_blank" rel="noreferrer">
+          <div class="story-top"><span>STELLAR VIETNAM</span><span>ECOSYSTEM RESEARCH</span></div>
+          <h3>The Vietnam Flywheel</h3>
+          <p>University → builders → hackathons → funding, mapped as an ecosystem pipeline.</p>
+          <div class="metrics"><strong>13.2K</strong><span>views</span><strong>293</strong><span>likes</span><strong>162</strong><span>replies</span></div>
+          <span class="story-link">READ THREAD ↗</span>
+        </a>
+        <a class="story-card tilt-card reveal" href="https://x.com/__Official__1/status/2097551171405615175" target="_blank" rel="noreferrer">
+          <div class="story-top"><span>PROPXBT</span><span>EXPLAINER</span></div>
+          <h3>Inside the $200K Headline</h3>
+          <p>An explainer that unpacks the mechanics behind a headline instead of amplifying it.</p>
+          <div class="metrics"><strong>10.9K</strong><span>views</span><strong>236</strong><span>likes</span><strong>190</strong><span>replies</span></div>
+          <span class="story-link">READ THREAD ↗</span>
+        </a>
+      </div>
+      <div class="content-total reveal"><span>SELECTED WRITING TOTAL</span><strong>48.2K+</strong><span>views across 3 lead pieces</span><a href="https://medium.com/@Jayepaul81" target="_blank" rel="noreferrer">MEDIUM ↗</a></div>
+    </section>
+
+    <section id="community" class="lane lane-community observe">
+      <div class="lane-intro reveal">
+        <div class="lane-kicker"><span>05</span><span>COMMUNITY</span></div>
+        <h2>Communities don't need noise. <span>They need rhythm.</span></h2>
+        <p>My community work is grounded in clear communication, consistent presence and launch-focused execution — backed by enough product knowledge to answer beyond the surface.</p>
+      </div>
+      <div class="community-board">
+        <article class="community-card reveal">
+          <div class="community-name"><span>01</span><h3>Sugarverse</h3><small>COMMUNITY MANAGEMENT</small></div>
+          <p>Managed community activity and launch support with a focus on keeping members informed, discussions healthy and product communication clear.</p>
+          <div class="community-tags"><span>Telegram</span><span>Launch support</span><span>Member communication</span></div>
+        </article>
+        <article class="community-card reveal">
+          <div class="community-name"><span>02</span><h3>Robusinpe</h3><small>GAMING · COMMUNITY</small></div>
+          <p>Handled community management around the gaming project, supporting day-to-day engagement and the communication needed around launch activity.</p>
+          <div class="community-tags"><span>Gaming</span><span>Community ops</span><span>GTM support</span></div>
+        </article>
+        <div class="community-method reveal">
+          <span class="mono">OPERATING LOOP</span>
+          <div class="method-line"><b>LISTEN</b><i>→</i><b>EXPLAIN</b><i>→</i><b>ENGAGE</b><i>→</i><b>LOOP BACK</b></div>
+          <p>Spaces hosting and content strategy connect the product team and the community — not as separate jobs, but as one feedback system.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="motion" class="lane lane-motion observe">
+      <div class="lane-intro reveal">
+        <div class="lane-kicker"><span>06</span><span>MOTION</span></div>
+        <h2>Design should <span>move with intent.</span></h2>
+        <p>I use motion to make launches, interfaces and Web3 ideas easier to feel — not to decorate them. This lane is structured to grow into a full showreel as new pieces are published.</p>
+      </div>
+      <div class="motion-stage reveal" id="motionStage">
+        <div class="motion-orbit orbit-one"></div><div class="motion-orbit orbit-two"></div>
+        <div class="motion-core"><span>J</span><span>K</span></div>
+        <div class="motion-copy"><span class="mono">MOTION SYSTEM / 01</span><h3>Launch reveals. UI motion. Campaign loops. Product stories.</h3><p>Built to hold video, GIF and case-study work without changing the visual system.</p></div>
+      </div>
+      <div class="motion-grid reveal"><div><span>01</span><b>Launch Reveal</b><p>Short-form product and campaign introductions.</p></div><div><span>02</span><b>UI Motion</b><p>Purposeful interface states and micro-interactions.</p></div><div><span>03</span><b>Social Loops</b><p>Compact motion pieces built for timeline attention.</p></div><div><span>04</span><b>Story Systems</b><p>Visual sequences that help explain complex ideas.</p></div></div>
+    </section>
+
+    <section id="proof" class="proof-section observe">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">07 / PROOF</p><h2>Not one lane. One operating system.</h2></div>
+        <p>The through-line is end-to-end execution: architecture → product → story → community → launch.</p>
+      </div>
+      <div class="proof-grid reveal">
+        <div class="proof-stat"><strong>3×</strong><span>Hackathon winner</span></div>
+        <div class="proof-stat"><strong>3</strong><span>Chain environments<br>EVM · SVM · Move</span></div>
+        <div class="proof-stat"><strong>48.2K+</strong><span>Selected writing views</span></div>
+        <div class="proof-stat"><strong>55+</strong><span>Public GitHub repos<br><small>profile count at build time</small></span></div>
+      </div>
+      <div class="recognition reveal">
+        <div><span class="mono">RECOGNITION</span><h3>Superteam UK · London</h3></div>
+        <p>Received a direct invitation to the Somerset House coworking space in London from Superteam UK leadership following a Colosseum hackathon submission.</p>
+      </div>
+      <div class="hackathons reveal"><span class="mono">SELECTED HACKATHONS</span><div><b>Colosseum</b><small>JUN 2026</small></div><div><b>Hack4Freedom</b><small>MAY 2026</small></div><div><b>Ranger's Build-A-Bear</b><small>MAR 2026</small></div><div><b>Spark Hackathon #1</b><small>FEB 2026</small></div></div>
+    </section>
+
+    <section id="resumes" class="resume-section observe">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">08 / RESUME VAULT</p><h2>One person. Different entry points.</h2></div>
+        <p>Choose the version closest to the role. The portfolio stays the full picture.</p>
+      </div>
+      <div class="resume-grid reveal">
+        <a class="resume-card" href="./assets/resumes/Jayking-Web3-Master-Resume.pdf" target="_blank"><span>01</span><h3>MASTER WEB3</h3><p>Builder · Developer · Content · Community · Motion</p><b>OPEN PDF ↗</b></a>
+        <a class="resume-card" href="./assets/resumes/Jayking-Web3-Content-Writer-Resume.pdf" target="_blank"><span>02</span><h3>CONTENT WRITER</h3><p>Research · Technical writing · Threads · Ecosystem storytelling</p><b>OPEN PDF ↗</b></a>
+        <a class="resume-card" href="./assets/resumes/Jayking-Web3-Community-Manager-Resume.pdf" target="_blank"><span>03</span><h3>COMMUNITY</h3><p>Community management · Spaces · Launch support · Engagement</p><b>OPEN PDF ↗</b></a>
+        <a class="resume-card resume-card--ghost" href="mailto:pauljayking1@gmail.com?subject=Jayking%20portfolio%20%E2%80%94%20role-specific%20resume"><span>04</span><h3>ROLE-SPECIFIC</h3><p>Need a tailored version for your opening?</p><b>REQUEST ↗</b></a>
+      </div>
+    </section>
+
+    <section id="about" class="about-section observe">
+      <div class="about-grid reveal">
+        <div><p class="eyebrow">ABOUT JAYKING</p><h2>Technical enough to build it. Clear enough to explain it.</h2></div>
+        <div class="about-copy"><p>I'm a Web3 builder working across development, research-led content, community and motion. My mathematics background shapes how I break down systems; my builder background keeps the storytelling grounded in how products actually work.</p><p class="mono">MATHEMATICS · DIFFERENTIAL GEOMETRY · REAL ANALYSIS · TOPOLOGY · TENSOR CALCULUS · NUMBER THEORY · MATHEMATICAL MODELING</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section observe">
+      <div class="contact-chess" aria-hidden="true">♚</div>
+      <p class="eyebrow reveal">ENDGAME / START A CONVERSATION</p>
+      <h2 class="reveal">Have a protocol, product, story or community that needs to move?</h2>
+      <a class="contact-email magnetic reveal" href="mailto:pauljayking1@gmail.com">pauljayking1@gmail.com <span>↗</span></a>
+      <div class="social-row reveal"><a href="https://x.com/__official__1" target="_blank" rel="noreferrer">X / @__official__1</a><a href="https://github.com/Paulos-ui" target="_blank" rel="noreferrer">GITHUB / Paulos-ui</a><a href="https://medium.com/@Jayepaul81" target="_blank" rel="noreferrer">MEDIUM / @Jayepaul81</a><a href="https://t.me/masterjaypaul" target="_blank" rel="noreferrer">TG / @masterjaypaul</a></div>
+      <footer><span>JAYKING © 2026</span><span>BUILT AS A LIVING PORTFOLIO</span><a href="#home">BACK TO TOP ↑</a></footer>
+    </section>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

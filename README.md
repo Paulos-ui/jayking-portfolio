@@ -1,3 +1,11 @@
+# Jayking Portfolio — V2 Motion Edition
+
+A custom multi-disciplinary Web3 portfolio for Jayking: Builder, Writer, Community Operator and Motion Designer. V2 rebuilds the entry experience with an animated Chess King identity, reactive motion, richer atmospheric backgrounds, a reliable entry transition, and a mobile-first hero.
+
+See `V2_CHANGELOG.md` for the exact upgrade list and `DEPLOY_TO_VERCEL.md` for deployment.
+
+---
+
 # JAYKING — Portfolio V1
 
 A custom, motion-led Web3 portfolio for **Jayking** — Builder · Developer · Content Strategist · Community Operator · Spaces Host · Motion Designer.

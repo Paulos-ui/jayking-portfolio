@@ -16,32 +16,69 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="./manifest.webmanifest" />
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles.css?v=2.2" />
 </head>
-<body>
+<body class="gate-open">
   <canvas id="signalField" aria-hidden="true"></canvas>
   <div class="noise" aria-hidden="true"></div>
   <div class="cursor-dot" aria-hidden="true"></div>
   <div class="cursor-ring" aria-hidden="true"></div>
 
   <div id="gate" class="gate" role="dialog" aria-modal="true" aria-label="Welcome to Jayking's portfolio">
+    <div class="gate-atmosphere" aria-hidden="true">
+      <span class="gate-aurora aurora-gold"></span>
+      <span class="gate-aurora aurora-green"></span>
+      <span class="gate-aurora aurora-amber"></span>
+      <span class="gate-horizon"></span>
+      <span class="gate-light-sweep"></span>
+    </div>
     <div class="gate-grid" aria-hidden="true"></div>
+    <div class="gate-frame" aria-hidden="true">
+      <span class="frame-tl">JAYKING / PORTFOLIO 2026</span>
+      <span class="frame-tr"><i></i> OPEN TO WEB3 WORK</span>
+      <span class="frame-bl">@__OFFICIAL__1</span>
+      <span class="frame-br">BUILD · WRITE · COMMUNITY · MOTION</span>
+    </div>
     <div class="gate-inner">
       <div class="gate-mark">
-        <div class="pfp-shell pfp-shell--gate">
-          <img src="./assets/jayking-pfp.jpg" alt="Jayking chess king avatar" />
-          <span class="orbit orbit-a"></span><span class="orbit orbit-b"></span>
+        <div class="king-float">
+          <div class="pfp-stage interactive-king" id="gatePfp">
+            <span class="king-aura"></span>
+            <span class="king-orbit king-orbit-a"></span>
+            <span class="king-orbit king-orbit-b"></span>
+            <span class="king-orbit king-orbit-c"></span>
+            <span class="king-node king-node-a"></span>
+            <span class="king-node king-node-b"></span>
+            <span class="king-node king-node-c"></span>
+            <div class="pfp-shell pfp-shell--gate">
+              <img src="./assets/jayking-pfp.jpg" alt="Jayking chess king avatar" />
+              <span class="pfp-sheen"></span>
+              <span class="scanline"></span>
+            </div>
+            <span class="king-label label-build">BUILD</span>
+            <span class="king-label label-story">STORY</span>
+            <span class="king-label label-move">MOVE</span>
+          </div>
         </div>
-        <span class="gate-index">PORTFOLIO / 2026</span>
+        <div class="gate-index-row">
+          <span>♚ CHESS KING PFP GUY</span>
+          <span>WEB3 / 2026</span>
+        </div>
       </div>
       <div class="gate-copy">
-        <p class="eyebrow">WELCOME TO THE BOARD</p>
-        <h1 class="gate-title"><span>JAY</span><span>KING</span></h1>
-        <p class="gate-line">Builder. Writer. Community operator. Motion designer.</p>
-        <button id="enterSite" class="magnetic primary-cta" type="button">
-          <span>ENTER PORTFOLIO</span><span class="cta-arrow">↗</span>
-        </button>
-        <p class="gate-hint">Tap to enter · motion adapts to your device</p>
+        <div class="gate-pretitle"><span>WELCOME TO THE BOARD</span><b>01 / 01</b></div>
+        <h1 class="gate-title" aria-label="Jayking"><span>JAY</span><span>KING</span></h1>
+        <p class="gate-line">I build Web3 products, turn technical systems into stories, move communities, and give ideas motion.</p>
+        <div class="gate-roleline" aria-label="Roles">
+          <span><b>01</b> BUILDER</span><span><b>02</b> WRITER</span><span><b>03</b> COMMUNITY</span><span><b>04</b> MOTION</span>
+        </div>
+        <a id="enterSite" class="magnetic primary-cta gate-cta" href="#home"
+           onclick="var g=document.getElementById('gate');if(g){g.classList.add('is-gone');g.setAttribute('aria-hidden','true');}document.body.classList.remove('gate-open');">
+          <span class="cta-label">ENTER PORTFOLIO</span>
+          <span class="cta-track" aria-hidden="true"><i></i></span>
+          <span class="cta-arrow">↗</span>
+        </a>
+        <div class="gate-hint"><span>MOVE YOUR CURSOR</span><i></i><span>TAP TO ENTER</span></div>
       </div>
     </div>
   </div>
@@ -69,7 +106,7 @@
       </div>
       <div class="hero-center">
         <div class="hero-avatar reveal">
-          <div class="pfp-shell">
+          <div class="pfp-shell interactive-king hero-king" id="heroPfp">
             <img src="./assets/jayking-pfp.jpg" alt="Jayking chess king PFP" />
             <span class="scanline"></span>
           </div>
@@ -284,6 +321,6 @@
     </section>
   </main>
 
-  <script type="module" src="./app.js"></script>
+  <script src="./app.js?v=2.2" defer></script>
 </body>
 </html>

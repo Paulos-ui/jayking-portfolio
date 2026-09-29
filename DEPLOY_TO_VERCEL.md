@@ -1,89 +1,61 @@
-# Deploy Jayking Portfolio to Vercel
+# Deploy Jayking Portfolio V2 to Vercel
 
-This V1 is a static site, so there is **no build step** and no environment variable required.
+This portfolio is a static HTML/CSS/JavaScript site. There is no build step and no environment variable required.
 
-## Option A — GitHub + Vercel (recommended)
+## If your V1 is already on GitHub + Vercel
 
-1. Create a new GitHub repository, for example `jayking-portfolio`.
-2. Unzip this folder on your computer.
-3. Open a terminal inside the folder.
-4. Run:
+This is the easiest update path.
+
+1. Unzip `Jayking_Portfolio_V2.zip`.
+2. Copy the contents of the `jayking-portfolio` folder over the files in your existing portfolio repository.
+3. Commit and push:
+
+```bash
+git add .
+git commit -m "Upgrade Jayking portfolio to V2 motion experience"
+git push
+```
+
+4. Vercel will automatically redeploy the connected repository.
+5. When deployment finishes, open the site in an incognito/private browser window once to confirm the new entry screen.
+
+The CSS and JavaScript URLs in V2 include a version query (`?v=2.2`) to reduce the chance of an old browser cache serving the V1 files.
+
+## Fresh GitHub deployment
+
+Create a new repository, then from inside the unzipped project folder:
 
 ```bash
 git init
 git add .
-git commit -m "Launch Jayking portfolio v1"
+git commit -m "Launch Jayking portfolio V2"
 git branch -M main
 git remote add origin https://github.com/Paulos-ui/jayking-portfolio.git
 git push -u origin main
 ```
 
-5. Go to Vercel and choose **Add New → Project**.
-6. Import `Paulos-ui/jayking-portfolio`.
-7. Framework Preset: **Other**.
-8. Build Command: leave blank.
-9. Output Directory: leave blank.
-10. Click **Deploy**.
+Then:
 
-Vercel will give you a temporary domain such as:
+1. Go to Vercel.
+2. Select **Add New → Project**.
+3. Import the GitHub repository.
+4. Framework preset: **Other**.
+5. Build command: leave empty.
+6. Output directory: leave empty/default.
+7. Click **Deploy**.
 
-`jayking-portfolio.vercel.app`
+## Custom domain later
 
-Every future push to `main` will deploy automatically.
+In Vercel open **Project → Settings → Domains**, add the domain you buy, then follow Vercel's DNS instructions.
 
-## Option B — Vercel CLI
+Suggested structure once a domain is connected:
+- `yourdomain.xyz` — main portfolio
+- `yourdomain.xyz/#builder` — builder work
+- `yourdomain.xyz/#content` — writing
+- `yourdomain.xyz/#community` — community
+- `yourdomain.xyz/#motion` — motion
+- `yourdomain.xyz/#resumes` — resume vault
 
-Install the CLI:
+## Important before replacing V1
 
-```bash
-npm i -g vercel
-```
-
-Then from this folder:
-
-```bash
-vercel
-```
-
-Follow the prompts. For production:
-
-```bash
-vercel --prod
-```
-
-## Connect your own domain
-
-In the Vercel project:
-
-1. Settings → Domains.
-2. Add the domain you buy, e.g. `jayking.xyz`.
-3. Vercel shows the DNS records to add at your registrar.
-4. Once DNS verifies, Vercel provisions HTTPS automatically.
-
-Recommended structure after launch:
-
-- `jayking.xyz` — main portfolio
-- `jayking.xyz/#builder` — builder lane
-- `jayking.xyz/#content` — content lane
-- `jayking.xyz/#community` — community lane
-- `jayking.xyz/#motion` — motion lane
-- `jayking.xyz/#resumes` — resume vault
-
-## Before you share it publicly
-
-- Check all X, Medium, Telegram and GitHub links.
-- Confirm each GitHub project you want in “Live Build Library” has its **Website** field filled in.
-- Add real motion videos when available.
-- Replace or refine any community/project copy if you want more detailed metrics.
-- Test once on iPhone/Android and once on desktop.
-
-## Future V2 upgrade path
-
-This static V1 can later be migrated to Next.js without changing the visual concept. The natural V2 additions are:
-
-- individual case-study routes (`/work/umbra`, `/writing/stellar-vietnam`)
-- a CMS for projects/writing
-- richer route transitions
-- video showreel / motion case studies
-- analytics
-- role-specific share links and OpenGraph cards
+Keep the current V1 deployment until V2 finishes deploying successfully. Vercel keeps deployment history, so you can also roll back from the Vercel dashboard if needed.
